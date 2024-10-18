@@ -6,8 +6,8 @@ import solid.l.bad.BadSquare;
 import solid.l.good.GoodGraphicsService;
 import solid.l.good.GoodRectangle;
 import solid.l.good.GoodSquare;
+import solid.l.good.Shape;
 
-import java.awt.*;
 
 public class LMain {
     public static void main(String[] args) {

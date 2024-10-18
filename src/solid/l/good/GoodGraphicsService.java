@@ -6,13 +6,30 @@ public class GoodGraphicsService {
     public void checkForArea(Shape rectangle) {
 
         if (rectangle instanceof GoodSquare square) {
-            System.out.println("Ii is a square: " + square.getArea());
+            verify(square, square.getSide(), "Square");
         } else if (rectangle instanceof GoodRectangle rectange) {
-
-            System.out.println("It is a Rectangle: " + rectange.getArea());
+            verify(rectange, rectange.getWidth(), rectange.getHeight(), "Rectangle");
         } else {
             System.out.println("Error");
         }
 
     }
+
+
+    private void verify(GoodRectangle rectangle, int width, int height, String entity) {
+        if (rectangle.getArea() == (width * height)) {
+            System.out.println("Great " + entity + " you got there!");
+        } else {
+            System.out.println("Well, not a " + entity + ".");
+        }
+    }
+
+    private void verify(GoodSquare rectangle, int side, String entity) {
+        if (rectangle.getArea() == (side * side)) {
+            System.out.println("Great " + entity + " you got there!");
+        } else {
+            System.out.println("Well, not a " + entity + ".");
+        }
+    }
+
 }
